@@ -11,11 +11,14 @@ This application FuleApp interact with Monday.com to retrieve and update work it
 5.	Test Account in Monday.com
 
 **Cloning application source and run:**
+
 Git Hub link: 
+
 Command to run the application:  ***mvn spring-boot:run***
+
 On successful execution of application, below logs will appear in the console
-<sub> 2023-08-31 19:31:20.834  INFO 36448 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2023-08-31 19:31:20.859  INFO 36448 --- [           main] com.test.fuelApp.FuelAppApplication      : Started FuelAppApplication in 5.617 seconds (JVM running for 6.024) </sub>
+2023-08-31 19:31:20.834  INFO 36448 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-08-31 19:31:20.859  INFO 36448 --- [           main] com.test.fuelApp.FuelAppApplication      : Started FuelAppApplication in 5.617 seconds (JVM running for 6.024) 
 
 
 How to Run:-
