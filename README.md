@@ -30,13 +30,13 @@ The service uses an in-memory database (H2) to store the data. User can also use
 
 1.	POST: /register - to register the user by providing username and password as a request body. This will create a new user entry in the database (DB name?).
 
-http://localhost:8081/register
+> http://localhost:8081/register
 
-_Request:
-{
-    "username":"test5",
-    "password":"test123"
-}_
+> _Request:
+> {
+>    "username":"TestUser_1",
+>    "password":"test123"
+> }_
 
 2.	POST:/authenticate - to authenticate the user by validating the given credential with data base and provides the authentication token to login.
 
@@ -44,31 +44,30 @@ _Request:
 
 > _Request:
 > {
->    "username":"test9",
+>    "username":"TestUser_1",
 >    "password":"test123"
 > }_
 
 3.	GET: /getItems - to retrieve the work items from Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
-http://localhost:8081/getItems?token=XXXXXXXXX
+> http://localhost:8081/getItems?token=<XXXXXXXXX>
 
-_Request:
-{
-    "query": "query { boards(ids:1259058835) { items { id name } } }"
-}_
+> _Request:
+> {
+>    "query": "query { boards(ids:1259058835) { items { id name } } }"
+> }_
 
 4.	GET: /updateItemName - To update the item name in Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
-http://localhost:8081/updateItemName?token=XXXXXX
+> http://localhost:8081/updateItemName?token=<XXXXXX>
 
-_Request:
-{
-    "query": "mutation {change_multiple_column_values(item_id:1259058839, board_id:1259058835, column_values: \"{\\\"name\\\" : \\\"Completed Item\\\"}\") {id}}" 
-}_
+> _Request:
+> {
+>    "query": "mutation {change_multiple_column_values(item_id:1259058839, board_id:1259058835, column_values: \"{\\\"name\\\" : \\\"Completed Item\\\"}\") {id}}" 
+> }_
 
 
 **To view H2 in-memory database**
 Application runs on H2 in-memory database. To view and query the database you can browse to http://localhost:8081/h2-console. 
-
 Default username is 'sa' with password as 'password'.
 
