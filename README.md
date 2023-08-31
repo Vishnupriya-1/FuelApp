@@ -27,7 +27,7 @@ The service uses an in-memory database (H2) to store the data. User can also use
 
 _Available endpoints:_
 
-1.	POST: _/register_ - to register the user by providing username and password as a request body. This will create a new user entry in the database (DB name?).
+1.	POST: **_/register_** - to register the user by providing username and password as a request body. This will create a new user entry in the database (DB name?).
 
 > http://localhost:8081/register
 
@@ -37,7 +37,7 @@ _Available endpoints:_
 >    "password":"test123"
 > }_
 
-2.	POST:_/authenticate_ - to authenticate the user by validating the given credential with data base and provides the authentication token to login.
+2.	POST:**_/authenticate_** - to authenticate the user by validating the given credential with data base and provides the authentication token to login.
 
 > http://localhost:8081/authenticate
 
@@ -47,7 +47,7 @@ _Available endpoints:_
 >    "password":"test123"
 > }_
 
-3.	GET: _/getItems_ - to retrieve the work items from Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
+3.	GET: **_/getItems_** - to retrieve the work items from Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
 > http://localhost:8081/getItems?token=<XXXXXXXXX>
 
@@ -56,7 +56,7 @@ _Available endpoints:_
 >    "query": "query { boards(ids:1259058835) { items { id name } } }"
 > }_
 
-4.	GET: _/updateItemName_ - to update the item name in Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
+4.	GET: **_/updateItemName_** - to update the item name in Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
 > http://localhost:8081/updateItemName?token=<XXXXXX>
 
