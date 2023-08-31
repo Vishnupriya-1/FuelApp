@@ -1,7 +1,7 @@
 # FuelApp
 Coding challenge
 
-This application FuleApp interact with Monday.com to retrieve and update work items/projects. FuleApp application is authenticated using JWT token.
+This application FuleApp interacts with Monday.com to retrieve and update work items/projects. FuleApp application is authenticated using JWT token.
 
 **Pre-requisite:**
 1.	Java 17 
@@ -12,9 +12,9 @@ This application FuleApp interact with Monday.com to retrieve and update work it
 
 **Cloning application source and run:**
 
-Git Hub link: 
+Git Hub link: https://github.com/Vishnupriya-1/FuelApp.git
 
-Command to run the application:  ***mvn spring-boot:run***
+Command to run the application: ***mvn spring-boot:run***
 
 On successful execution of application, below logs will appear in the console
 
@@ -56,7 +56,7 @@ _Available endpoints:_
 >    "query": "query { boards(ids:1259058835) { items { id name } } }"
 > }_
 
-4.	GET: /updateItemName - To update the item name in Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
+4.	GET: /updateItemName - to update the item name in Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
 > http://localhost:8081/updateItemName?token=<XXXXXX>
 
