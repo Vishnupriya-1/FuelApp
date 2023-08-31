@@ -1,8 +1,23 @@
 # FuelApp
 Coding challenge
 
+This application FuleApp interact with Monday.com to retrieve and update work items/projects. FuleApp application is authenticated using JWT token.
 
-This application integrates with Monday.com. The application is authenticated using JWT and interacts with Monday.com to retrieve the work items and also update the item name.
+**Pre-requisite:**
+1.	Java 17 
+2.	Spring boot 2.7.15
+3.	H2 Database
+4.	Postman (version)
+5.	Test Account in Monday.com
+
+**Cloning application source and run:**
+Git Hub link: 
+Command to run the application:  ***mvn spring-boot:run***
+On successful execution of application, below logs will appear in the console
+<sub> 2023-08-31 19:31:20.834  INFO 36448 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-08-31 19:31:20.859  INFO 36448 --- [           main] com.test.fuelApp.FuelAppApplication      : Started FuelAppApplication in 5.617 seconds (JVM running for 6.024) </sub>
+
+
 How to Run:-
 You can run with the command "mvn spring-boot:run"
 Version Used:-
