@@ -22,41 +22,53 @@ On successful execution of application, below logs will appear in the console
 > 
 > 2023-08-31 19:31:20.859  INFO 36448 --- [           main] com.test.fuelApp.FuelAppApplication      : Started FuelAppApplication in 5.617 seconds (JVM running for 6.024) 
 
-About the Service:-
-The service uses an in-memory database (H2) to store the data. You can also do with any database. If your database connection properties work, you can call some REST endpoints defined in com.test.fuelApp.controller; on port 8081. (see below)
-Here are the endpoints you can call: -
-1.	POST: /register – to register the user by providing username and password as a request body which will create that particular user in Database.
+**About the Service**
+The service uses an in-memory database (H2) to store the data. User can also use any database. After successful database setup, user can start using the REST endpoints defined in “com.test.fuelApp.controller”; on port 8081.
+
+
+**Available endpoints:**
+
+1.	POST: /register - to register the user by providing username and password as a request body. This will create a new user entry in the database (DB name?).
+
 http://localhost:8081/register
-Request:
+
+_Request:
 {
     "username":"test5",
     "password":"test123"
-}
+}_
 
-2.	POST:/authenticate – to authenticate the user by checking in database if exists and provides the authenticated token to login.
+2.	POST:/authenticate - to authenticate the user by validating the given credential with data base and provides the authentication token to login.
+
 http://localhost:8081/authenticate
-Request:
+
+_Request:
 {
     "username":"test9",
     "password":"test123"
-}
+}_
 
-3.	GET: /getItems – To retrieve the work items from Monday.com by passing the Monday account API token as param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
+3.	GET: /getItems - to retrieve the work items from Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
+
 http://localhost:8081/getItems?token=XXXXXXXXX
-Request:
+
+_Request:
 {
     "query": "query { boards(ids:1259058835) { items { id name } } }"
-}
-4.	GET: /updateItemName – To update the item name in Monday.com by by passing the Monday account API token as param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
+}_
 
+4.	GET: /updateItemName - To update the item name in Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
 http://localhost:8081/updateItemName?token=XXXXXX
-Request:
+
+_Request:
 {
     "query": "mutation {change_multiple_column_values(item_id:1259058839, board_id:1259058835, column_values: \"{\\\"name\\\" : \\\"Completed Item\\\"}\") {id}}" 
-}
+}_
 
 
-To view H2 in-memory database:-
-Application runs on H2 in-memory database. To view and query the database you can browse to http://localhost:8081/h2-console. Default username is 'sa' with password as 'password'.
+**To view H2 in-memory database**
+Application runs on H2 in-memory database. To view and query the database you can browse to http://localhost:8081/h2-console. 
+
+Default username is 'sa' with password as 'password'.
 
