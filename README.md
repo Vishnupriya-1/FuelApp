@@ -37,7 +37,7 @@ _Available endpoints:_
 >    "password":"test123"
 > }_
 
-2.	POST:**_/authenticate_** - to authenticate the user by validating the given credential with data base and provides the authentication token to login.
+2.	POST: **_/authenticate_** - to authenticate the user by validating the given credential with data base and provides the authentication token to login.
 
 > http://localhost:8081/authenticate
 
