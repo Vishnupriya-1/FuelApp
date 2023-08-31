@@ -40,13 +40,13 @@ _Request:
 
 2.	POST:/authenticate - to authenticate the user by validating the given credential with data base and provides the authentication token to login.
 
-http://localhost:8081/authenticate
+> http://localhost:8081/authenticate
 
-_Request:
-{
-    "username":"test9",
-    "password":"test123"
-}_
+> _Request:
+> {
+>    "username":"test9",
+>    "password":"test123"
+> }_
 
 3.	GET: /getItems - to retrieve the work items from Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
