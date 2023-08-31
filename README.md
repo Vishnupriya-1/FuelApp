@@ -17,19 +17,9 @@ Git Hub link:
 Command to run the application:  ***mvn spring-boot:run***
 
 On successful execution of application, below logs will appear in the console
-2023-08-31 19:31:20.834  INFO 36448 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2023-08-31 19:31:20.859  INFO 36448 --- [           main] com.test.fuelApp.FuelAppApplication      : Started FuelAppApplication in 5.617 seconds (JVM running for 6.024) 
 
-
-How to Run:-
-You can run with the command "mvn spring-boot:run"
-Version Used:-
-Java 17 Spring boot 2.7.15
-Clone this repository:-
-Clone the Fuel App repository and build the project using the command "mvn spring-boot:run"
-Once the application runs you should see something like this
-2023-08-31 19:31:20.834  INFO 36448 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2023-08-31 19:31:20.859  INFO 36448 --- [           main] com.test.fuelApp.FuelAppApplication      : Started FuelAppApplication in 5.617 seconds (JVM running for 6.024)
+> 2023-08-31 19:31:20.834  INFO 36448 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+> 2023-08-31 19:31:20.859  INFO 36448 --- [           main] com.test.fuelApp.FuelAppApplication      : Started FuelAppApplication in 5.617 seconds (JVM running for 6.024) 
 
 About the Service:-
 The service uses an in-memory database (H2) to store the data. You can also do with any database. If your database connection properties work, you can call some REST endpoints defined in com.test.fuelApp.controller; on port 8081. (see below)
