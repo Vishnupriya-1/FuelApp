@@ -7,7 +7,7 @@ This application FuleApp interact with Monday.com to retrieve and update work it
 1.	Java 17 
 2.	Spring boot 2.7.15
 3.	H2 Database
-4.	Postman (version)
+4.	Postman 
 5.	Test Account in Monday.com
 
 **Cloning application source and run:**
@@ -22,11 +22,10 @@ On successful execution of application, below logs will appear in the console
 > 
 > 2023-08-31 19:31:20.859  INFO 36448 --- [           main] com.test.fuelApp.FuelAppApplication      : Started FuelAppApplication in 5.617 seconds (JVM running for 6.024) 
 
-**About the Service**
+**About the Service:**
 The service uses an in-memory database (H2) to store the data. User can also use any database. After successful database setup, user can start using the REST endpoints defined in “com.test.fuelApp.controller”; on port 8081.
 
-
-**Available endpoints:**
+_Available endpoints:_
 
 1.	POST: /register - to register the user by providing username and password as a request body. This will create a new user entry in the database (DB name?).
 
@@ -67,7 +66,8 @@ The service uses an in-memory database (H2) to store the data. User can also use
 > }_
 
 
-**To view H2 in-memory database**
+**To view H2 in-memory database:**
+
 Application runs on H2 in-memory database. To view and query the database you can browse to http://localhost:8081/h2-console. 
 Default username is 'sa' with password as 'password'.
 
