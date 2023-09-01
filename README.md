@@ -1,7 +1,7 @@
 # FuelApp
 Coding challenge
 
-This application FuleApp interacts with Monday.com to retrieve and update work items/projects. FuleApp application is authenticated using JWT token.
+This application FuelApp interacts with Monday.com to retrieve and update work items/projects. FuelApp application is authenticated using JWT token.
 
 **Pre-requisite:**
 1.	Java 17 
@@ -27,7 +27,7 @@ The service uses an in-memory database (H2) to store the data. User can also use
 
 _Available endpoints:_
 
-1.	POST: **_/register_** - to register the user by providing username and password as a request body. This will create a new user entry in the database (DB name?).
+1.	POST: **_/register_** - to register the user by providing username and password as a request body. This will create a new user entry in the database.
 
 > http://localhost:8081/register
 
