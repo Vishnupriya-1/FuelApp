@@ -6,7 +6,7 @@ This application FuelApp interacts with Monday.com to retrieve and update work i
 **Pre-requisite:**
 1.	Java 17 
 2.	Spring boot 2.7.15
-3.	H2 Database
+3.	H2 - In Memory Database
 4.	Postman 
 5.	Test Account in Monday.com
 
@@ -36,6 +36,9 @@ _Available endpoints:_
 >    "username":"TestUser_1",
 >    "password":"test123"
 > }_
+>
+> _Response: { "username":"TestUser_1"}_
+>
 
 2.	POST: **_/authenticate_** - to authenticate the user by validating the given credential with data base and provides the authentication token to login.
 
@@ -44,26 +47,53 @@ _Available endpoints:_
 > _Request:
 > {
 >    "username":"TestUser_1",
->    "password":"test123"
+>     "password":"test123"
 > }_
+>
+> _Response: {    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0NSIs.....fRF9A" }_
 
 3.	GET: **_/getItems_** - to retrieve the work items from Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
-> http://localhost:8081/getItems?token=<XXXXXXXXX>
+> http://localhost:8081/getItems?token=<Monday.com_User_Token>
 
 > _Request:
 > {
 >    "query": "query { boards(ids:1259058835) { items { id name } } }"
 > }_
+>
+> _Authorisation: Bearer Token_
+>
+> _Params: Pass Monday.com API token as token_
+>
+>  Response: {
+>    "data": {
+>        "boards": [
+>            {
+>                "items": [
+>                    {
+>                        "id": "1259058839",
+>                        "name": "Completed Item"
+>                    },
+....
+>     "account_id": 18520804
+>}
+> 
 
 4.	GET: **_/updateItemName_** - to update the item name in Monday.com by passing the Monday account API token as a param and the request body which contains the query string as an input to call the API URL. Also pass the bearer token response received from the above endpoint.
 
-> http://localhost:8081/updateItemName?token=<XXXXXX>
+> http://localhost:8081/updateItemName?token=<Monday.com_User_Token>
 
 > _Request:
 > {
 >    "query": "mutation {change_multiple_column_values(item_id:1259058839, board_id:1259058835, column_values: \"{\\\"name\\\" : \\\"Completed Item\\\"}\") {id}}" 
 > }_
+>
+> _Authorisation: Bearer Token_
+> 
+> _Params : Pass Monday.com API token as token_
+> 
+> _Response: {"data":{"change_multiple_column_values":{"id":"1259058839"}},"account_id":18520804}_
+
 
 
 **To view H2 in-memory database:**
